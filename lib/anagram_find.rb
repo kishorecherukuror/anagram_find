@@ -14,7 +14,7 @@ module AnagramFind
               puts "No such file"
               exit
           end
-          anagram = words.flatten.group_by {|w| w.downcase.chars.sort }.values.select {|arr| arr.include? word.downcase}.flatten
+          anagram = words.flatten.group_by {|w| w.chars.sort }.values.select {|arr| arr.include? word}.flatten
           anagram.empty? ? "No anagram" : anagram
       end
     end
